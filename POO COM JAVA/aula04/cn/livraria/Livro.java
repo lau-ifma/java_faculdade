@@ -6,6 +6,8 @@ public class Livro {
     double valor;
     String isbn;
 
+    Livro(){}
+
     Livro(String nome, String descricao, double valor,String isbn){
         this.nome = nome;
         this.descricao = descricao;
