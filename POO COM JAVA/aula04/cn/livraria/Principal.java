@@ -2,18 +2,20 @@ package cn.livraria;
 
 public class Principal {
     public static void main(String[] args) {
-        Livro l1 = new Livro("Java como Programar", "Primeiros passos", 59.90, "987-458-7841-12-3");
-        Livro l2 = new Livro();
+        Livro livro01 = new Livro();
 
-        l2.nome = "Python 3";
-        l2.descricao = "Primeiros passos";
-        l2.valor = 55.50;
-        l2.isbn = "7878-784-78-125";
+        Autor autor01 = new Autor();
+        autor01.setNome("joaozinho Java dev");
+        autor01.setEmail("joaozinhodev@gamil.com");
+        autor01.setCpf("425.458.223-11");
 
-        System.out.println("Livros:");
+        livro01.setNome("Java Basico");
+        livro01.setDescricao("Livro básico de fundamentos em java");
+        livro01.setValor(50.0);
+        livro01.setIsbn("7878-857-777");
+        livro01.setAutor(autor01);
 
-        l1.mostrarDetalhes();
-        System.out.println("");
-        l2.mostrarDetalhes();
+        livro01.mostrarDetalhes();
+
     }
 }
