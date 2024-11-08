@@ -14,7 +14,7 @@ public class Livraria {
     }
 
    public boolean isEmpty(){
-       return size ==0;
+       return size == 0;
    }
 
    public void adicionar(Livro livro) throws RuntimeException{
@@ -26,7 +26,11 @@ public class Livraria {
    }
 
 //   public Livro buscarLivro(String nomeLivro)  throws RuntimeException{
-//       for (int i = 0; i <= livros.length; i++){
+//       if(isEmpty()){
+//           throw new RuntimeException("Vetor vazio");
+//       }
+//
+//       for (int i = 0; i < size; i++){
 //           Livro livro = livros[i];
 //           if (livro.nome.equals(nomeLivro)){
 //               System.out.println("Livro encontrado!");
@@ -34,6 +38,38 @@ public class Livraria {
 //           }
 //           throw new RuntimeException("nao encontrado!!");
 //       }
+//
 //   }
 
+
+    public String removeNoFinal()  throws RuntimeException{
+        if(isEmpty()){
+            throw new RuntimeException("Vetor vazio");
+        }
+        String temp = livros[size -1].getNome();
+        livros[size-1] = null;
+        size--;
+        return temp;
+    }
+
+
+    public String removeNoInicio()  throws RuntimeException{
+        if(isEmpty()){
+            throw new RuntimeException("Vetor vazio");
+        }
+        String temp = livros[0].getNome();
+        livros[0] = null;
+
+        for(int i = 1; i < size; i++){
+            livros[i -1] = livros[i];
+        }
+        livros[size -1]= null;
+        size--;
+    }
+
 }
+
+
+
+
+
