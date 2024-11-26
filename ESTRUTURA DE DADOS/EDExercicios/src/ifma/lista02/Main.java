@@ -2,6 +2,7 @@ package ifma.lista02;
 
 public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         int matriz[][] = {  
                             // d. secundaria = i+j == 2 
                 {1, 2, 3},  // [0,2] 
@@ -206,3 +207,27 @@ public class Main {
 
 }
     
+=======
+        int matriz[][] = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9},
+        };
+
+        q01(matriz);
+    }
+
+    static void q01(int[][] matriz){
+
+        for (int i = 0; i < matriz.length; i++) {
+            matriz[i][i] = 0;
+
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println(matriz[i][j]);
+            }
+        }
+
+    }
+
+}
+>>>>>>> 056a0892ae35d830990a074cd72601a9a93318e5
