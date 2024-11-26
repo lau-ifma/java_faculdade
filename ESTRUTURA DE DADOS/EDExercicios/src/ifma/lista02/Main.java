@@ -21,7 +21,8 @@ public class Main {
         // q10(matriz);
         // q11(matriz);
         // q12(matriz);
-        q13(matriz);
+        // q13(matriz);
+        q14(matriz);
 
     }
 
@@ -197,9 +198,19 @@ public class Main {
             for (int y = 0; y < B[x].length; y++){
                 System.out.print(B[x][y] + " ");
             }
-        }
-       
+        } 
     }
+
+    static void q14 (int[][] matriz){
+        // int matriz[][] = {{1,2,3}, {4,5,6}, {7,8,9}};  -- [2][0]. [1][1]
+        for (int j = 0; j < 3; j++) { // lendo colunas  
+            System.out.println();
+            for (int i = matriz.length - 1; i >= 0; i--) { // lendo linhas
+                System.out.print(matriz[i][j]+ " ");
+            }
+        }
+    } 
+
 
 
 
