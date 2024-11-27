@@ -3,11 +3,13 @@ package ifma.lista02;
 public class Main {
     public static void main(String[] args) {
         int matriz[][] = {  
-                            // d. secundaria = i+j == 2 
+                            // Diag.S = i+j == 2
                 {1, 2, 3},  // [0,2] 
                 {4, 5, 6},  // [1,1]
                 {7, 8, 9},  // [2,0]
         };
+
+        int matriz3x2[][] = {{1,2}, {3,4}, {5,6}};
 
         // q01(matriz);
         // q02(matriz);
@@ -22,7 +24,11 @@ public class Main {
         // q11(matriz);
         // q12(matriz);
         // q13(matriz);
-        q14(matriz);
+        // q14(matriz);
+        // q15(matriz);
+        // q16(matriz);
+        // q17(matriz);
+         q18(matriz3x2);
 
     }
 
@@ -202,18 +208,66 @@ public class Main {
     }
 
     static void q14 (int[][] matriz){
-        // int matriz[][] = {{1,2,3}, {4,5,6}, {7,8,9}};  -- [2][0]. [1][1]
-        for (int j = 0; j < 3; j++) { // lendo colunas  
+        // int matriz[][] = {{1,2,3}, {4,5,6}, {7,8,9}};
+        for (int j = 0; j < 3; j++) {
             System.out.println();
-            for (int i = matriz.length - 1; i >= 0; i--) { // lendo linhas
+            for (int i = matriz.length - 1; i >= 0; i--) {
+                System.out.print(matriz[i][j]+ " "); //[2][0]. [1][0] [0][0]
+            }
+        }
+    }
+
+    static void q15 (int[][] matriz){
+        // int matriz[][] = {{1,2,3}, {4,5,6}, {7,8,9}};
+        for (int i = matriz.length - 1; i >=0 ; i--) {
+            System.out.println();
+            for (int j = matriz[i].length - 1; j >= 0; j--) {
                 System.out.print(matriz[i][j]+ " ");
             }
         }
-    } 
+    }
+
+    static void q16 (int[][] matriz){
+        // int matriz[][] = {{1,2,3}, {4,5,6}, {7,8,9}};
+        for (int i = matriz.length -1; i >=0 ; i--) {
+            System.out.println();
+            for (int j = 0; j < matriz.length; j++) {
+                System.out.print(matriz[j][i]+ " ");
+            }
+        }
+    }
+
+    static void q17 (int[][] matriz){
+        // int matriz[][] = {{1,2,3}, {4,5,6}, {7,8,9}};
+        for (int i = 0; i < matriz.length ; i++) {
+            System.out.println();
+            for (int j = 0; j < matriz.length; j++) {
+                if (j != 1){
+                    System.out.print(matriz[i][j]+ " ");
+                }
+            }
+        }
+    }
+
+    static void q18 (int[][] matriz){
+         // int matriz[][] = {{1,2}, {3,4}, {5,6}};
+        int[][] x = new int[2][3];
+
+        for (int i = 0; i <= 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                x[j][i] = matriz[i][j];
+            }
+        }
+
+        for (int i = 0; i <= 1; i++) {
+            System.out.println();
+            for (int j = 0; j <= 2 ; j++) {
+                System.out.print(x[i][j] + " ");
+            }
+        }
 
 
-
-
+    }
 
 }
     
