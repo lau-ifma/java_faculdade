@@ -1,12 +1,10 @@
 package ifma.lista03;
 
 public class Node {
-    String element;
-    Node next, prev;
+    int element;
+    Node next;
 
-    public Node(String e, Node n, Node p){
-        element = e;
-        next = n;
-        prev = p;
+    public Node(int element){
+        this.element = element;
     }
 }
