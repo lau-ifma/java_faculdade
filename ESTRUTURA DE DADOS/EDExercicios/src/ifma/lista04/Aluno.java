@@ -13,6 +13,7 @@ public class Aluno {
         this.nota2 = nota2;
     }
 
+
     public String toString() {
         DecimalFormat df = new DecimalFormat("0.0");
         String n1 = df.format(nota1);
