@@ -17,7 +17,6 @@ public class Aluno {
         DecimalFormat df = new DecimalFormat("0.0");
         String n1 = df.format(nota1);
         String n2 = df.format(nota2);
-        String s = "(" + nome + ", " + n1 + "," + n2;
-        return s + ")";
+        return "(" + nome + ", " + n1 + ", " + n2 + ")";
     }
 }
