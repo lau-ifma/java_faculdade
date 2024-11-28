@@ -74,6 +74,7 @@ public class SimpleList {
             s += ", " + node.element;
             node = node.next;
         }
-        return s + "]";}
+        return s + "]";
+    }
 
 }

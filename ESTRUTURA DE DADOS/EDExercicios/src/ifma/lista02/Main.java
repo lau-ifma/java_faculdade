@@ -27,7 +27,7 @@ public class Main {
         // q14(matriz);
         // q15(matriz);
         // q16(matriz);
-        // q17(matriz);
+        q17(matriz);
         q18(matriz3x2);
 
     }

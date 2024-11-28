@@ -24,9 +24,12 @@ public class DLinkedList {
         size = size + 1;
     }
 
-    public static void main(String[] args) {
-        DLinkedList lista = new DLinkedList();
+    
 
+    @Override
+    public String toString() {
+        return "DLinkedList [header=" + header.element + ", trailer=" + trailer.element + ", size=" + size + "]";
     }
+
 }
 
