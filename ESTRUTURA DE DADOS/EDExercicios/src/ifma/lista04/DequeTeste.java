@@ -7,10 +7,15 @@ public class DequeTeste {
         Aluno a1 = new Aluno("Douglas", 8.0, 7.5);
         Aluno a2 = new Aluno("Laura", 7.0, 9.5);
         Aluno a3 = new Aluno("Sofia", 4.0, 7.5);
+        Aluno a4 = new Aluno("Joao", 9.0, 7.5);
+
 
         lista.addFirst(a1);
         lista.addFirst(a2);
         lista.addFirst(a3);
+
+        System.out.println("Resultado da Busca: " + lista.search("Sofia").aluno.toString());
+        System.out.println();
 
         System.out.println(lista);
         
@@ -22,7 +27,7 @@ public class DequeTeste {
 
         System.out.println("\nAluno " + lista.removeLast() + " removido do final");
         System.out.println(lista);
-        // lista.removeLast();
+
 
 
     }       

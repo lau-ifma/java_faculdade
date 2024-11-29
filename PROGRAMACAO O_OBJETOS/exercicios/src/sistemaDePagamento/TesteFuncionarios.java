@@ -6,6 +6,7 @@ import java.util.List;
 public class TesteFuncionarios {
     public static void main(String[] args) {
         List<Funcionario> listaFunc = new ArrayList<>();
+
         FuncionarioComissionado func1 = new FuncionarioComissionado();
         func1.setNome("Raimundo");
         func1.setCpf("365.274.871-11");
@@ -22,6 +23,7 @@ public class TesteFuncionarios {
         func3.setCpf("009.476.228-11");
         func3.setHorasTrabalhadas(10);
         func3.setValorHoro(70.00);
+
 
         listaFunc.add(func1);
         listaFunc.add(func2);

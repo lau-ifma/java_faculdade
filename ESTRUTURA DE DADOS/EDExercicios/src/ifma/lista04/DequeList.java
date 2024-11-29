@@ -27,6 +27,18 @@ public class DequeList {
         size++;
     }
 
+
+    public void addLast(Aluno aluno) {
+        Node ultimo = trailer.previous;
+        Node novoItem = new Node(aluno);
+        novoItem.next = trailer;
+        novoItem.previous = ultimo;
+        ultimo.next = novoItem;
+        trailer.previous = novoItem;
+        size++;
+    }
+
+
     public Node getFirst(){
         if (isEmpty()) {
             throw new RuntimeException("Lista Vazia");
@@ -69,45 +81,41 @@ public class DequeList {
 }
 
 
-    // public void addLast(String element) {
-    //     Node ultimo = trailer.previous;
-    //     Node novoItem = new Node(element);
-    //     novoItem.next = trailer;
-    //     novoItem.previous = ultimo;
-    //     ultimo.next = novoItem;
-    //     trailer.previous = novoItem;
-    //     size++;
-    // }
-
-    // public String removeLast() {
-    //     if (isEmpty()) {
-    //         throw new RuntimeException("Lista Vazia");
-    //     }
-    //     Node ultimo = trailer.previous;
-    //     Node penultimo = ultimo.previous;
-    //     penultimo.next = trailer;
-    //     trailer.previous = penultimo;
-    //     size--;
-    //     return ultimo.element;
-    // }
-
-   
-       
-    
 
     public String toString() {
         if (isEmpty()) {
             return "[ ]";
         }
         Node node = header.next;
-        String s = "[" + node.aluno.toString(); 
+        String s = "[" + node.aluno.toString();
         node = node.next;
         while (node != trailer) {
             s += ", " + node.aluno.toString();
             node = node.next;
         }
         return s + "]";
-       }
+    }
+
+
+    public Node search(String nomeAluno){
+        if (isEmpty()) {
+            throw new RuntimeException("Lista Vazia");
+        }
+        int qtd = 0;
+        Node node = header.next;
+        for (int i = 0; i < size; i++){
+            if (node.aluno.nome.equals(nomeAluno)){
+                return node;
+            }
+            node = node.next;
+        }
+
+        throw new RuntimeException("Aluno não encontrado!");
+
+
+
+
+    }
 
 
 }
