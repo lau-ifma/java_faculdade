@@ -7,7 +7,7 @@ public class TesteVectorStack {
         vector.push("Joao");
         vector.push("Maria");
         vector.push("Bruno");
-        System.out.println(vector.top());
+        //System.out.println(vector.top());
         System.out.println(vector);
     }
 }

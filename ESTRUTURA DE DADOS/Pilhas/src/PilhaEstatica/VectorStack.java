@@ -49,18 +49,31 @@ public class VectorStack implements  IStack{
     }
 
 
+//    @Override
+//    public String toString() {
+//        String s = "[";
+//        if (size > 0){
+//            for(int i = 0; i < size();i++ ){
+//                if (S[i] == top())
+//                    s+= S[i] + ", ";
+//                else
+//                    s+= S[i];
+//            }
+//        }
+//
+//        return s + "]";
+//    }
+
+
     @Override
     public String toString() {
-        String s = "[";
-        if (size > 0){
-            for(int i = 0; i < size();i++ ){
-                if (S[i] == top())
-                    s+= S[i] + ", ";
-                else
-                    s+= S[i];
-            }
-        }
-
-        return s + "]";
+        return "VectorStack{" +
+                "capacidade=" + capacidade +
+                ", S=" + Arrays.toString(S) +
+                ", size=" + size +
+                '}';
     }
 }
+
+
+

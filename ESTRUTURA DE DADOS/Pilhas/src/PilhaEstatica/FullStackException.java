@@ -2,7 +2,7 @@ package PilhaEstatica;
 
 public class FullStackException extends RuntimeException {
 
-    public FullStackException(){
+    private FullStackException(){
         super("Pilha cheia!");
     }
 }
