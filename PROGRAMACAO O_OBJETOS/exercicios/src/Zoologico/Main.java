@@ -11,7 +11,7 @@ public class Main {
         a1.setTipoPenas("Penas marrom com branco");
 
         Mamifero m1 = new Mamifero();
-        a1.setId(2);
+        m1.setId(2);
         m1.setNome("Bob");
         m1.setEspecie("Cachorro");
         m1.setTempoGestacao(2);
@@ -37,6 +37,13 @@ public class Main {
         f3.setNome("Maria");
         f3.setEspecialidade("Cuidador de aves");
 
+        Zoo.animais.add(a1);
+        Zoo.animais.add(m1);
+        Zoo.animais.add(r1);
+
+        Zoo.funcionarios.add(f1);
+        Zoo.funcionarios.add(f2);
+        Zoo.funcionarios.add(f3);
 
 ;    }
 }

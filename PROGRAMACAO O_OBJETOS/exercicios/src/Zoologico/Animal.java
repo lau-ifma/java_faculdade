@@ -4,6 +4,7 @@ public abstract class Animal {
     private int id;
     private String nome;
     private String especie;
+    static int totalAnimais = 0;
 
     public Animal(){
     }

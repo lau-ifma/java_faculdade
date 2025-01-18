@@ -6,11 +6,10 @@ import java.util.List;
 public class Zoologico {
     List<Animal> animais = new ArrayList<>();
     List<Funcionario> funcionarios = new ArrayList<>();
-    static int totalAnimais = 0;
 
     public void adicioarAnimal(Animal novoAnimal){
         animais.add(novoAnimal);
-        totalAnimais+=1;
+        Animal.totalAnimais = animais.size();
     }
 
     public void adicionarFuncionario(Funcionario novoFuncionario){
@@ -26,6 +25,4 @@ public class Zoologico {
         System.out.println("O nome do animal " + temp + " foi alterado para " + novoNome );
 
     }
-
-
 }
