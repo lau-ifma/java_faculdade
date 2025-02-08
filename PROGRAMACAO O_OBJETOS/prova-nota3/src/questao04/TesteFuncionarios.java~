@@ -1,0 +1,43 @@
+package questao04;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TesteFuncionarios {
+    public static void main(String[] args) {
+        List<Empregado> listaEmpregados = new ArrayList<>();
+
+        EmpregadoComissionado func1 = new EmpregadoComissionado();
+        func1.setNome("Raimundo");
+        func1.setCpf("365.274.871-11");
+        func1.setComissao(50.00);
+        func1.setSalarioBase(1412.00);
+
+
+        EmpregadoHorista func3 = new EmpregadoHorista();
+        func3.setNome("Douglas");
+        func3.setCpf("009.476.228-11");
+        func3.setHorasTrabalhadas(10);
+        func3.setValorHoro(70.00);
+
+
+        listaEmpregados.add(func1);
+        listaEmpregados.add(func3);
+
+        for(Empregado func : listaEmpregados){
+            if (func instanceof EmpregadoComissionado) {
+                System.out.println("Tipo de empregado: Empregado comissionado");
+                System.out.println("Comissao: " + ((EmpregadoComissionado) func).getComissao());
+                System.out.println("Salario base: " + ((EmpregadoComissionado) func).getSalarioBase());
+            } else if (func instanceof EmpregadoHorista) {
+                System.out.println("Tipo de empregado: Empregado Horista");
+                System.out.println("Horas trabalhadas: " + ((EmpregadoHorista) func).getHorasTrabalhadas());
+                System.out.println("Valor hora: " + ((EmpregadoHorista) func).getValorHoro());
+            }
+            System.out.println("Nome do funcionario: " + func.getNome());
+            System.out.println("Salario: " + func.calcularSalario());
+            System.out.println("-----------------------");
+        }
+
+    }
+}
